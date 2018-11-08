@@ -52,7 +52,7 @@
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(785, 20);
             this.txtInput.TabIndex = 1;
-            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
+            //this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // txtOutput
             // 
@@ -61,7 +61,7 @@
             this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(785, 20);
             this.txtOutput.TabIndex = 3;
-            this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
+            //this.txtOutput.TextChanged += new System.EventHandler(this.txtOutput_TextChanged);
             // 
             // lbl2
             // 
@@ -80,7 +80,7 @@
             this.btnEncode.TabIndex = 4;
             this.btnEncode.Text = "Encode";
             this.btnEncode.UseVisualStyleBackColor = true;
-            this.btnEncode.Click += new System.EventHandler(this.btnEncode_Click);
+            this.btnEncode.Click += new System.EventHandler(this.BtnEncode_Click);
             // 
             // btnCopy
             // 
@@ -90,7 +90,7 @@
             this.btnCopy.TabIndex = 5;
             this.btnCopy.Text = "Copy";
             this.btnCopy.UseVisualStyleBackColor = true;
-            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
+            this.btnCopy.Click += new System.EventHandler(this.BtnCopy_Click);
             // 
             // btnDecode
             // 
@@ -100,7 +100,7 @@
             this.btnDecode.TabIndex = 6;
             this.btnDecode.Text = "Decode";
             this.btnDecode.UseVisualStyleBackColor = true;
-            this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
+            this.btnDecode.Click += new System.EventHandler(this.BtnDecode_Click);
             // 
             // Form_Base64_Converter
             // 
