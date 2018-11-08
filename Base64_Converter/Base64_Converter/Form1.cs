@@ -44,7 +44,11 @@ namespace Base64_Converter
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
+            var nullGuard = NullCheck(txtOutput.Text);
+            if (nullGuard != false)
+                return;
 
+            Clipboard.SetText(txtOutput.Text);
         }
 
         private bool NullCheck(string value)
