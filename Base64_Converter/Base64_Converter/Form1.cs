@@ -29,7 +29,7 @@ namespace Base64_Converter
 
         }
 
-        private void btnProcess_Click(object sender, EventArgs e)
+        private void btnEncode_Click(object sender, EventArgs e)
         {
             var nullGuard = NullCheck(txtInput.Text);
             if (nullGuard != false)
@@ -37,9 +37,8 @@ namespace Base64_Converter
                 MessageBox.Show(InputTextNull, "Error");
                 return;
             }
-                
 
-            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(txtInput.Text);
+            var plainTextBytes = Encoding.UTF8.GetBytes(txtInput.Text);
            txtOutput.Text = Convert.ToBase64String(plainTextBytes);
         }
 
@@ -51,6 +50,19 @@ namespace Base64_Converter
         private bool NullCheck(string value)
         {
             return value == "";
+        }
+
+        private void btnDecode_Click(object sender, EventArgs e)
+        {
+            var nullGuard = NullCheck(txtInput.Text);
+            if (nullGuard != false)
+            {
+                MessageBox.Show(InputTextNull, "Error");
+                return;
+            }
+
+            var base64EncodedBytes = Convert.FromBase64String(txtInput.Text);
+            txtOutput.Text = Encoding.UTF8.GetString(base64EncodedBytes);
         }
     }
 }

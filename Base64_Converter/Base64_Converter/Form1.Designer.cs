@@ -32,8 +32,9 @@
             this.txtInput = new System.Windows.Forms.TextBox();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.btnProcess = new System.Windows.Forms.Button();
+            this.btnEncode = new System.Windows.Forms.Button();
             this.btnCopy = new System.Windows.Forms.Button();
+            this.btnDecode = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl1
@@ -71,15 +72,15 @@
             this.lbl2.TabIndex = 2;
             this.lbl2.Text = "Output String";
             // 
-            // btnProcess
+            // btnEncode
             // 
-            this.btnProcess.Location = new System.Drawing.Point(26, 171);
-            this.btnProcess.Name = "btnProcess";
-            this.btnProcess.Size = new System.Drawing.Size(148, 26);
-            this.btnProcess.TabIndex = 4;
-            this.btnProcess.Text = "Process";
-            this.btnProcess.UseVisualStyleBackColor = true;
-            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            this.btnEncode.Location = new System.Drawing.Point(26, 171);
+            this.btnEncode.Name = "btnEncode";
+            this.btnEncode.Size = new System.Drawing.Size(148, 26);
+            this.btnEncode.TabIndex = 4;
+            this.btnEncode.Text = "Encode";
+            this.btnEncode.UseVisualStyleBackColor = true;
+            this.btnEncode.Click += new System.EventHandler(this.btnEncode_Click);
             // 
             // btnCopy
             // 
@@ -91,13 +92,24 @@
             this.btnCopy.UseVisualStyleBackColor = true;
             this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
+            // btnDecode
+            // 
+            this.btnDecode.Location = new System.Drawing.Point(203, 171);
+            this.btnDecode.Name = "btnDecode";
+            this.btnDecode.Size = new System.Drawing.Size(148, 26);
+            this.btnDecode.TabIndex = 6;
+            this.btnDecode.Text = "Decode";
+            this.btnDecode.UseVisualStyleBackColor = true;
+            this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
+            // 
             // Form_Base64_Converter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(921, 249);
+            this.Controls.Add(this.btnDecode);
             this.Controls.Add(this.btnCopy);
-            this.Controls.Add(this.btnProcess);
+            this.Controls.Add(this.btnEncode);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.txtInput);
@@ -115,8 +127,9 @@
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.Label lbl2;
-        private System.Windows.Forms.Button btnProcess;
+        private System.Windows.Forms.Button btnEncode;
         private System.Windows.Forms.Button btnCopy;
+        private System.Windows.Forms.Button btnDecode;
     }
 }
 
