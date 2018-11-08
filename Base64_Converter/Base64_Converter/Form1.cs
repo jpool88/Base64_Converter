@@ -19,17 +19,7 @@ namespace Base64_Converter
             InputTextNull = $"{lbl1} must be populated";
         }
 
-        private void txtInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOutput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEncode_Click(object sender, EventArgs e)
+        private void BtnEncode_Click(object sender, EventArgs e)
         {
             var nullGuard = NullCheck(txtInput.Text);
             if (nullGuard != false)
@@ -42,7 +32,7 @@ namespace Base64_Converter
            txtOutput.Text = Convert.ToBase64String(plainTextBytes);
         }
 
-        private void btnCopy_Click(object sender, EventArgs e)
+        private void BtnCopy_Click(object sender, EventArgs e)
         {
             var nullGuard = NullCheck(txtOutput.Text);
             if (nullGuard != false)
@@ -51,12 +41,7 @@ namespace Base64_Converter
             Clipboard.SetText(txtOutput.Text);
         }
 
-        private bool NullCheck(string value)
-        {
-            return value == "";
-        }
-
-        private void btnDecode_Click(object sender, EventArgs e)
+        private void BtnDecode_Click(object sender, EventArgs e)
         {
             var nullGuard = NullCheck(txtInput.Text);
             if (nullGuard != false)
@@ -68,5 +53,11 @@ namespace Base64_Converter
             var base64EncodedBytes = Convert.FromBase64String(txtInput.Text);
             txtOutput.Text = Encoding.UTF8.GetString(base64EncodedBytes);
         }
+
+        private bool NullCheck(string value)
+        {
+            return value == "";
+        }
+
     }
 }
